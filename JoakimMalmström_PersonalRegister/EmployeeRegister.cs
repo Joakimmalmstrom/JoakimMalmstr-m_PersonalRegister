@@ -1,36 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace JoakimMalmström_PersonalRegister
 {
-    class Employee
+    class EmployeeRegister
     {
-        public Employee()
+        public EmployeeRegister()
         {
             Name = new List<string>();
             Salary = new List<int>();
         }
 
-        public void AddEmployee()
+        public void AddEmployee(string name, int salary)
         {
-            Console.Write("Name: ");
-            string name = Console.ReadLine();
-
-            Console.Write("Salary: ");
-            int salary = int.Parse(Console.ReadLine());
-            Console.WriteLine("");
-
             Name.Add(name);
             Salary.Add(salary);
         }
 
-        public void CompileEmployee()
+        public void CompileRegister()
         {
-            Console.Clear();
-
             for (int i = 0; i < Name.Count; i++)
             {
                 Console.WriteLine("Employee " + (1 + i));
